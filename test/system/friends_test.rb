@@ -15,7 +15,7 @@ class FriendsTest < ApplicationSystemTestCase
     click_on "New friend"
 
     fill_in "Email", with: @friend.email
-    fill_in "Frist name", with: @friend.frist_name
+    fill_in "Frist name", with: @friend.first_name
     fill_in "Last name", with: @friend.last_name
     fill_in "Phone", with: @friend.phone
     fill_in "Twitter", with: @friend.twitter
@@ -30,7 +30,7 @@ class FriendsTest < ApplicationSystemTestCase
     click_on "Edit this friend", match: :first
 
     fill_in "Email", with: @friend.email
-    fill_in "Frist name", with: @friend.frist_name
+    fill_in "Frist name", with: @friend.first_name
     fill_in "Last name", with: @friend.last_name
     fill_in "Phone", with: @friend.phone
     fill_in "Twitter", with: @friend.twitter
