@@ -1,7 +1,8 @@
+<% if friend.user == current_user %>
 <tr id="<%= dom_id friend %>">
-  <th scope="row"><%= friend.first_name %></th>
-
-  <td><%= friend.last_name %></td>
+  <th scope="row">
+    <%= link_to friend.first_name + " " + friend.last_name , friend %>
+  </th>
 
   <td><%= friend.email %></td>
 
@@ -9,5 +10,10 @@
 
   <td><%= friend.twitter %></td>
 
-  <td><%= link_to "View Details", friend %></td>
+  <!-- <td><%= friend.user_id %></td> -->
+
+  <td>
+    <%= link_to "Delete", friend, data: { "turbo-method": :delete }, class: "btn btn-outline-danger btn-sm" %>
+  </td>
 </tr>
+<% end %>
